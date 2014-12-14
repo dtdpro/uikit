@@ -89,6 +89,12 @@
             ]
         },
         {
+            "label": "MTools",
+            "vars": [
+                "@mt-*"
+            ]
+        },
+        {
             "label": "Typography",
             "vars": [
                 "@global-color",

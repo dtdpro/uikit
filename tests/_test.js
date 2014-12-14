@@ -166,7 +166,11 @@
         });
 
         controls.prepend(testselect);
-
+		
+		if (location.href.match('core') || location.href.match('components')) {
+			$("body").addClass('mt-content-inner');
+		}
+		
         if (!iniframe) {
 
             $.get(base+"themes.json", {nocache:Math.random()}).always(function(data, type){

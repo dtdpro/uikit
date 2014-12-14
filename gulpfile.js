@@ -15,6 +15,7 @@ var pkg         = require('./package.json'),
     minifycss   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
     watch       = require('gulp-watch'),
+    s3          = require('gulp-s3'),
     tap         = require('gulp-tap'),
     zip         = require('gulp-zip'),
     runSequence = require('run-sequence'),
@@ -73,7 +74,8 @@ var watchmode  = gutil.env._.length && gutil.env._[0] == 'watch',
         './src/js/core/switcher.js',
         './src/js/core/tab.js',
         './src/js/core/tooltip.js'
-    ];
+    ],
+    aws = JSON.parse(fs.readFileSync('./aws.json'));
 
 
 gulp.task('default', ['dist', 'build-docs', 'indexthemes'], function(done) {
@@ -669,4 +671,8 @@ gulp.task('sublime', ['sublime-css', 'sublime-js', 'sublime-snippets'], function
         .on('end', function(){
             gulp.src("dist/sublime/tmp_*.py", {read: false}).pipe(rimraf()).on('end', done);
         });
+});
+
+gulp.task('s3upload', function() {
+	gulp.src('./dist/**').pipe(s3(aws));
 });
