@@ -1,5 +1,20 @@
 # Changelog
 
+### 2.14.0 (December 10, 2014)
+  - IMPORTANT: Replaced uk-position-absolute with uk-position-top
+  - Added uk-panel-hover to panel component
+  - Added uk-text-contrast to text component
+  - Added uk-position-bottom to utility component
+  - Updated panels to work with anchors
+  - Fixed fullscreen slideshows for iOS < 8
+  - Fixed [data-uk-observe]
+  - Fixed tab component with only one tab
+
+  **Docs and Repo**
+
+  - Updated panel docs and tests
+  - Updated dotnav tests
+
 ### 2.13.1 (December 05, 2014)
   - Fixed clearfix method when used with flex
   - Fixed IE error causing UIkit crash
@@ -32,7 +47,7 @@
 
   **Docs and Repo**
 
-    - Added triggered event names
+  - Added triggered event names
 
 ### 2.12.0 (November 11, 2014)
 

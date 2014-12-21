@@ -42,7 +42,7 @@
 
     var UI = {}, _UI = window.UIkit;
 
-    UI.version = '2.13.1';
+    UI.version = '2.14.0';
     UI._prefix = 'uk';
 
     UI.noConflict = function(prefix) {
@@ -603,7 +603,7 @@
         UI.$body = UI.$('body');
 
         UI.ready(function(context){
-            UI.domObserve('[data-@-observe]', context || document);
+            UI.domObserve('[data-@-observe]');
         });
 
         UI.on('ready.uk.dom', function(){
