@@ -84,7 +84,7 @@
 
                             <h2 id="usage"><a href="#usage" class="uk-link-reset">Usage</a></h2>
 
-                            <p>To create a navigation with dots, just add the <code>.uk-dotnav</code> to an <code>&lt;ul&gt;</code> element and nest <code>&lt;a&gt;</code> elements within the list. This is perfect to create a typical slideshow navigation.</p>
+                            <p>To create a navigation with dots, just add the <code>.uk-dotnav</code> class to an <code>&lt;ul&gt;</code> element and nest <code>&lt;a&gt;</code> elements within the list. This is perfect to create a typical slideshow navigation.</p>
 
                             <h3 class="tm-article-subtitle">Example</h3>
 
@@ -106,9 +106,41 @@
 
                             <hr class="uk-article-divider">
 
-                            <h3>Vertical dotnav</h3>
+                            <h2 id="slidenav-and-images"><a href="#slidenav-and-images" class="uk-link-reset">Dotnav and images</a></h2>
+
+                            <p>For better visibility on images, for example when using the Dotnav as a slideshow navigation, just add the <code>.uk-dotnav-contrast</code> class.</p>
+
+                            <h3 class="tm-article-subtitle">Example</h3>
+
+                            <div class="uk-position-relative">
+
+                                <img src="images/placeholder_600x400.svg" width="600" height="400" alt="">
+
+                                <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-text-center" style="width: 600px;">
+                                    <li class="uk-active"><a href="#">Item 1</a></li>
+                                    <li><a href="#">Item 2</a></li>
+                                    <li><a href="#">Item 3</a></li>
+                                    <li><a href="#">Item 4</a></li>
+                                    <li><a href="#">Item 5</a></li>
+                                    <li><a href="#">Item 6</a></li>
+                                </ul>
+
+                            </div>
+
+                            <h3 class="tm-article-subtitle">Markup</h3>
+
+<pre><code>&lt;ul class="uk-dotnav uk-dotnav-contrast"&gt;
+    &lt;li class="uk-active"&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                            <hr class="uk-article-divider">
+
+                            <h2 id="vertical-dotnav"><a href="#vertical-dotnav" class="uk-link-reset">Vertical dotnav</a></h2>
 
                             <p>The Dotnav can also be aligned vertically. Just add the <code>.uk-dotnav-vertical</code> class. This is great for page scroll navigation using the <a href="scrollspy.html">Scrollspy</a>.</p>
+
+                            <h3 class="tm-article-subtitle">Example</h3>
 
                             <ul class="uk-dotnav uk-dotnav-vertical">
                                 <li class="uk-active"><a href="#">Item 1</a></li>

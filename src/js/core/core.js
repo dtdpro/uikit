@@ -3,7 +3,7 @@
     if (typeof define == "function" && define.amd) { // AMD
         define("uikit", function(){
 
-            var uikit = core(window, window.jQuery, window.document);
+            var uikit = window.UIkit || core(window, window.jQuery, window.document);
 
             uikit.load = function(res, req, onload, config) {
 
@@ -42,7 +42,7 @@
 
     var UI = {}, _UI = window.UIkit;
 
-    UI.version = '2.14.0';
+    UI.version = '2.15.0';
     UI._prefix = 'uk';
 
     UI.noConflict = function(prefix) {

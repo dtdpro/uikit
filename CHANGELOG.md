@@ -1,5 +1,23 @@
 # Changelog
 
+### 2.15.0 (December 19, 2014)
+  - IMPORTANT: Renamed uk-slidenav-inverted to uk-slidenav-contrast
+  - Added header, footer, caption and spinner to modal component
+  - Added dotnav-contrast to dotnav component
+  - Added hidden classes for touch devices to utility component
+  - Added center option for modals
+  - Better dimension recognition in cover component
+  - Iframes with the class uk-responsive-width behave like responsive images now (via JavaScript)
+  - Fixed Slideshow without a parent container + fold effect
+  - Fixed unprefixed autocomplete dropdown flip + search dropdown
+  - Fixed switcher with animations for IE < 10
+  - Fixed toggler with animations for IE < 10
+  - Fixed clearfix method
+
+  **Docs and Repo**
+
+  - Updated slidenav and dotnav docs and tests
+
 ### 2.14.0 (December 10, 2014)
   - IMPORTANT: Replaced uk-position-absolute with uk-position-top
   - Added uk-panel-hover to panel component
