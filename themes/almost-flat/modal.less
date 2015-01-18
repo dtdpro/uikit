@@ -12,8 +12,6 @@
 @modal-dialog-background:                       @global-background;
 
 @modal-header-margin-bottom:                    @global-margin;
-@modal-header-font-size:                        round((@global-font-size * 1.74)); // 24px / 28px
-@modal-header-line-height:                      round((@modal-header-font-size * 1.27)); // 30px / 36px
 
 @modal-footer-margin-top:                       @global-margin;
 
@@ -33,6 +31,12 @@
     border-radius: @global-border-radius;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+
+// Modifier: `uk-modal-dialog-lightbox`
+// ========================================================================
+
+.hook-modal-dialog-lightbox() { border-radius: 0; }
 
 
 // Sub-object: `uk-modal-header`
