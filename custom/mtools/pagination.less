@@ -1,0 +1,72 @@
+//
+// Component: Pagination
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@pagination-line-height:                        @global-line-height;
+@pagination-color: 								#ffffff;
+@pagination-hover-color: 						#ffffff;
+@pagination-onclick-color:                      #ffffff;
+
+@pagination-active-background:                  @global-primary-background;
+@pagination-active-color:                       @global-contrast-color;
+
+@pagination-disabled-color: 					#fff;
+
+
+@pagination-hover-background: 					#00739d;
+@pagination-background: 						#000000;
+@pagination-onclick-background: 				#393939;
+@pagination-padding-vertical: 					5px;
+@pagination-padding-horizontal: 				5px;
+@pagination-disabled-background: 				#6a6a6a;
+
+@pagination-border:                             rgba(0,0,0,0.06);
+@pagination-text-shadow:                        @global-text-shadow;
+@pagination-hover-border:                       rgba(0,0,0,0.16);
+
+@pagination-contrast-text-shadow:               @global-contrast-text-shadow;
+
+// Component
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-pagination-item() {
+	border: 1px solid @pagination-border;
+	border-radius: @global-border-radius;
+}
+
+// Link
+.hook-pagination-link() {
+    text-shadow: 0 1px 0 @pagination-text-shadow;
+}
+
+.hook-pagination-link-hover() { border-color: @pagination-hover-border; }
+
+.hook-pagination-link-active() {}
+
+// Active
+.hook-pagination-active() {
+	border-color: transparent;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    text-shadow: 0 -1px 0 @pagination-contrast-text-shadow;
+}
+
+// Disabled
+.hook-pagination-disabled() {
+    border: 1px solid @pagination-border;
+    text-shadow: 0 1px 0 @pagination-text-shadow;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-pagination-misc() {}

@@ -1,0 +1,139 @@
+//
+// Component: Panel
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@panel-title-margin-bottom:                     @global-margin;
+@panel-title-font-size:                         round((@global-font-size * 1.28)); // 18px / 20px
+@panel-title-line-height:                       round((@panel-title-font-size * 1.32)); // 24px / 26px
+@panel-title-color:                             @global-color;
+
+@panel-box-padding:                             @global-margin;
+@panel-box-color:                               @global-color;
+@panel-box-title-color:                         @global-color;
+@panel-box-teaser-margin: -(@panel-box-padding + 1);
+
+@panel-hover-padding: @global-margin;
+@panel-hover-hover-background: #fafafa;
+@panel-hover-teaser-margin: -(@panel-hover-padding + 1);
+
+@panel-header-title-border:                     @global-border;
+@panel-header-title-color:                      @global-color;
+
+@panel-divider-gutter:                          @global-grid-gutter;
+@panel-divider-gutter-large:                    @global-grid-gutter-large;
+@panel-divider-border:                          @global-border;
+
+// New
+
+@panel-hover-border: 							@global-border;
+
+@panel-box-background: 							#f4f4f4;
+@panel-box-border: 								@global-border;
+
+@panel-box-primary-background: 					#00739d;
+@panel-box-primary-color: 						#dddddd;
+@panel-box-primary-title-color: 				#ffffff;
+@panel-box-primary-link-color:					#ffffff;
+@panel-box-primary-link-hover-color:			#ffffcc;
+@panel-box-primary-border: fade(@panel-box-primary-color, 30%);
+
+@panel-box-secondary-background: 				#000000;
+@panel-box-secondary-color: 					#dddddd;
+@panel-box-secondary-title-color: 				#ffffff;
+@panel-box-secondary-link-color:				#ffffff;
+@panel-box-secondary-link-hover-color:			#ffffcc;
+@panel-box-secondary-border: fade(@panel-box-primary-color, 30%);
+
+
+
+
+
+
+// Sub-object: `uk-panel-title`
+// ========================================================================
+
+.hook-panel-title() {}
+
+
+// Sub-object: `uk-panel-badge`
+// ========================================================================
+
+.hook-panel-badge() {}
+
+
+// Modifier: `uk-panel-box`
+// ========================================================================
+
+.hook-panel-box() {
+	border: 1px solid @panel-box-border;
+	border-radius: @global-border-radius;
+}
+
+.hook-panel-box-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {border-color: @panel-box-primary-border;}
+
+.hook-panel-box-primary-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {}
+
+.hook-panel-box-secondary-hover() {}
+
+
+// Modifier: `uk-panel-hover`
+// ========================================================================
+
+.hook-panel-hover() {
+	border: 1px solid transparent;
+	border-radius: @global-border-radius;
+}
+
+.hook-panel-hover-hover() {border-color: @panel-hover-border; }
+
+
+// Modifier: `uk-panel-header`
+// ========================================================================
+
+.hook-panel-header() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {
+	.uk-panel-box .uk-panel-teaser  {
+		border-top-left-radius: @global-border-radius;
+		border-top-right-radius: @global-border-radius;
+		overflow: hidden;
+	}
+	
+	.uk-panel-box-primary a {
+		color: @panel-box-primary-link-color;
+	}
+	
+	.uk-panel-box-primary a:hover {
+		color: @panel-box-primary-link-hover-color;
+	}
+	
+	.uk-panel-box-secondary a {
+		color: @panel-box-primary-link-color;
+	}
+	
+	.uk-panel-box-secondary a:hover {
+		color: @panel-box-primary-link-hover-color;
+	}
+	
+}
