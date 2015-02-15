@@ -26,11 +26,11 @@ var watchmode  = gutil.env._.length && gutil.env._[0] == 'watch',
     watchCache = {},
     getThemes  = function(theme, all){
 
-        var list = [], themefolders = ["themes"];
+        var list = [], themefolders = ["themes","custom"];
 
-        if (theme || all) {
-            themefolders.push("custom");
-        }
+       // if (theme || all) {
+       //     themefolders.push("custom");
+       // }
 
         themefolders.forEach(function(f){
 
@@ -396,7 +396,7 @@ gulp.task('dist-themes', ['dist-variables'], function(done) {
 
             themes.forEach(function(theme) {
 
-                if (theme.path.match(/custom/)) return;
+                
 
                 var tplpath = [cpath, compname+'.'+theme.name+'.less'].join('/'),
                     csspath = ['./dist/css/components', compname+'.'+theme.name+'.css'].join('/'),
